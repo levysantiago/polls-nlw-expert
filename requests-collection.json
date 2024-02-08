@@ -1,0 +1,68 @@
+[
+  {
+    "name": "Polls",
+    "v": 2,
+    "requests": [
+      {
+        "name": "Create Poll",
+        "params": [],
+        "preRequestScript": "",
+        "v": "1",
+        "endpoint": "http://localhost:3333/polls",
+        "method": "POST",
+        "auth": {
+          "authType": "none",
+          "authActive": true
+        },
+        "testScript": "",
+        "body": {
+          "contentType": "application/json",
+          "body": "{\n  \"title\": \"Teste\",\n  \"options\": [\"Express\", \"Fastify\", \"NestJs\"]\n}"
+        },
+        "headers": []
+      },
+      {
+        "params": [],
+        "method": "GET",
+        "headers": [],
+        "testScript": "",
+        "name": "Get Poll",
+        "body": {
+          "body": "{\n  \"title\": \"Teste\",\n  \"options\": [\"Express\", \"Fastify\", \"NestJs\"]\n}",
+          "contentType": null
+        },
+        "auth": {
+          "authActive": true,
+          "authType": "none"
+        },
+        "preRequestScript": "",
+        "v": "1",
+        "endpoint": "http://localhost:3333/polls/178e6bd4-29f4-47e0-9c58-0a5c4f97f4a8"
+      },
+      {
+        "preRequestScript": "",
+        "name": "Vote On Poll",
+        "auth": {
+          "authType": "none",
+          "authActive": true
+        },
+        "testScript": "",
+        "method": "POST",
+        "v": "1",
+        "params": [],
+        "endpoint": "http://localhost:3333/polls/178e6bd4-29f4-47e0-9c58-0a5c4f97f4a8/votes",
+        "body": {
+          "contentType": "application/json",
+          "body": "{\n  \"pollOptionId\": \"862c49b4-3315-4365-ba62-1a3af651ce36\"\n}"
+        },
+        "headers": []
+      }
+    ],
+    "folders": [],
+    "headers": [],
+    "auth": {
+      "authActive": false,
+      "authType": "inherit"
+    }
+  }
+]
